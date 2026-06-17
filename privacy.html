@@ -5,121 +5,427 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Privacy Policy | Morph: Breath & Focus</title>
   <meta name="description" content="Privacy Policy for Morph: Breath & Focus." />
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b0f17;
+      --panel: rgba(255, 255, 255, 0.05);
+      --panel-strong: rgba(255, 255, 255, 0.08);
+      --border: rgba(255, 255, 255, 0.12);
+      --text: #f3f6fb;
+      --muted: rgba(243, 246, 251, 0.74);
+      --subtle: rgba(243, 246, 251, 0.58);
+      --accent: #8ec5ff;
+      --accent-2: #8ef0d4;
+      --link: #9ed0ff;
+      --max: 860px;
+      --radius: 20px;
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      background:
+        radial-gradient(circle at top left, rgba(48, 106, 180, 0.28), transparent 28%),
+        radial-gradient(circle at top right, rgba(30, 145, 120, 0.22), transparent 24%),
+        linear-gradient(180deg, #09101a 0%, #0b0f17 100%);
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 18px 56px;
+    }
+
+    .hero {
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 28px 22px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      margin-bottom: 18px;
+      border-radius: 999px;
+      background: rgba(142, 197, 255, 0.12);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+    }
+
+    .lede {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.02rem;
+      max-width: 70ch;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      margin-top: 18px;
+      color: var(--subtle);
+      font-size: 0.95rem;
+    }
+
+    .meta strong {
+      color: var(--text);
+      font-weight: 650;
+    }
+
+    .content {
+      margin-top: 22px;
+      display: grid;
+      gap: 16px;
+    }
+
+    section {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 20px;
+      backdrop-filter: blur(12px);
+    }
+
+    section:hover {
+      background: var(--panel-strong);
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1.18rem;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      margin: 0 0 12px;
+      color: var(--muted);
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .note {
+      border-left: 3px solid rgba(142, 197, 255, 0.72);
+      padding-left: 14px;
+      color: var(--muted);
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      margin-top: 10px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      color: var(--subtle);
+      font-size: 0.95rem;
+    }
+
+    .footer {
+      margin-top: 18px;
+      color: var(--subtle);
+      font-size: 0.92rem;
+      text-align: center;
+    }
+
+    .footer a {
+      color: var(--accent);
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding: 16px 12px 36px;
+      }
+
+      .hero {
+        padding: 22px 18px;
+        border-radius: 22px;
+      }
+
+      section {
+        padding: 18px 16px;
+        border-radius: 18px;
+      }
+
+      h2 {
+        font-size: 1.08rem;
+      }
+
+      .meta {
+        flex-direction: column;
+        gap: 6px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <main>
-    <header>
-      <h1>Privacy Policy</h1>
-      <p>This Privacy Policy explains how Morph: Breath & Focus collects, uses, stores, and protects information when you use the app and related web pages.</p>
-      <p>Last updated: 27.05.2026</p>
+  <main class="page">
+    <header class="hero">
+      <div class="eyebrow">Privacy Policy</div>
+      <h1>Morph: Breath & Focus</h1>
+      <p class="lede">
+        This Privacy Policy explains how Morph: Breath & Focus collects, uses, stores, and shares information when you use the app and related web pages.
+      </p>
+      <div class="meta">
+        <div><strong>App:</strong> Morph: Breath & Focus</div>
+        <div><strong>Bundle ID:</strong> morph.breath.focus</div>
+        <div><strong>Effective:</strong> 17 June 2026</div>
+      </div>
+      <div class="links">
+        <span><a href="https://andrewdzhy.github.io/morph-legal/terms.html">Terms of Use</a></span>
+        <span><a href="https://andrewdzhy.github.io/morph-legal/privacy.html" aria-current="page">Privacy Policy</a></span>
+      </div>
     </header>
 
-    <section>
-      <h2>1. Information We Collect</h2>
-      <p>Depending on how you use the app, we may collect the following categories of information:</p>
-      <ul>
-        <li>profile information you choose to enter in the app, such as a name or nickname;</li>
-        <li>settings and preferences, such as reminders, app settings, and feature toggles;</li>
-        <li>usage data, such as screen views, taps, session starts and completions, sound selections, and mood interactions;</li>
-        <li>subscription data, such as trial status, purchase status, receipts, and entitlement state;</li>
-        <li>content you choose to store locally, such as mood entries, session history, onboarding responses, and personal preferences;</li>
-        <li>technical data, such as device type, iOS version, IP address, diagnostic logs, crash data, and analytics identifiers where available and allowed.</li>
-      </ul>
-    </section>
+    <div class="content">
+      <section>
+        <h2>Overview</h2>
+        <p>
+          Morph: Breath & Focus is a wellness app for breathing, focus, sound, relaxation, and routine building. The app is designed to work without an account. Some information is stored locally on your device, and some information is processed by third-party service providers that help operate the app, measure product usage, manage subscriptions, and diagnose technical issues.
+        </p>
+        <p class="note">
+          We do not use App Tracking Transparency, we do not intentionally access IDFA, and we do not enable advertiser ID collection in the app code.
+        </p>
+      </section>
 
-    <section>
-      <h2>2. No Account Required</h2>
-      <p>Morph: Breath & Focus does not require you to create an account or sign in to use the core app experience.</p>
-      <p>We do not maintain a user account database and we do not use Supabase or a similar account-sync service in the app.</p>
-    </section>
+      <section>
+        <h2>Information We Collect</h2>
+        <p>Depending on how you use the app, we may collect or process the following categories of information:</p>
+        <ul>
+          <li>profile text you choose to enter, such as a name or nickname;</li>
+          <li>app preferences and feature settings;</li>
+          <li>onboarding responses and preference selections;</li>
+          <li>sound and session selections, session starts, session completions, and similar usage events;</li>
+          <li>paywall interaction data, subscription status, trial status, receipt information, and entitlement state;</li>
+          <li>anonymous analytics identifiers and app installation metadata;</li>
+          <li>device type, operating system version, app version, screen views, taps, technical logs, and crash or diagnostic data.</li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>3. Information Stored Locally</h2>
-      <p>Morph: Breath & Focus uses a local-first design. This means that some information is stored directly on your device, including:</p>
-      <ul>
-        <li>your name or nickname, if you choose to enter one;</li>
-        <li>your preferences and app settings;</li>
-        <li>breathing session history;</li>
-        <li>mood entries;</li>
-        <li>your last selected sound;</li>
-        <li>onboarding state;</li>
-        <li>cached subscription state, where supported.</li>
-      </ul>
-      <p>Local data may be protected by the security features of your device and operating system.</p>
-    </section>
+      <section>
+        <h2>No Account Required</h2>
+        <p>
+          Morph: Breath & Focus does not require you to create an account or sign in to use the core app experience.
+        </p>
+        <p>
+          The app does not currently use a Supabase-based or similar user account sync service.
+        </p>
+      </section>
 
-    <section>
-      <h2>4. Third-Party Services</h2>
-      <p>We may use third-party providers to help run Morph: Breath & Focus. These providers may process certain information in accordance with their own terms and policies.</p>
-      <ul>
-        <li><strong>Apple / App Store</strong> - for in-app purchases, subscriptions, and receipt handling.</li>
-        <li><strong>RevenueCat</strong> - for subscription management, receipts, and entitlement state.</li>
-        <li><strong>PostHog</strong> - for product analytics and usage insights.</li>
-      </ul>
-      <p>We do not use Supabase in the app.</p>
-    </section>
+      <section>
+        <h2>Information Stored Locally</h2>
+        <p>
+          Some information is stored directly on your device to support app functionality and your personal experience. This may include:
+        </p>
+        <ul>
+          <li>your chosen name or nickname, if you enter one;</li>
+          <li>app settings and preferences;</li>
+          <li>sound selections and session history;</li>
+          <li>onboarding responses and progress;</li>
+          <li>saved favorites or feature toggles, if available in the app;</li>
+          <li>cached subscription state and entitlement-related state.</li>
+        </ul>
+        <p>
+          Local data may remain on your device until you delete the app or remove it from your device storage.
+        </p>
+      </section>
 
-    <section>
-      <h2>5. How We Use Information</h2>
-      <p>We use information to:</p>
-      <ul>
-        <li>provide and maintain the app;</li>
-        <li>personalize the experience;</li>
-        <li>save your progress, preferences, and history;</li>
-        <li>process subscriptions, trials, and purchase restoration;</li>
-        <li>measure product usage, improve UX, and understand retention;</li>
-        <li>diagnose bugs, crashes, and technical issues;</li>
-        <li>send service-related messages where applicable.</li>
-      </ul>
-    </section>
+      <section>
+        <h2>Analytics and App Usage Data</h2>
+        <p>
+          We use PostHog for product analytics. This helps us understand how people use the app, which screens are viewed, which features are used, and where the experience can be improved.
+        </p>
+        <p>
+          Analytics data may include anonymous identifiers, screen views, taps, session starts and completions, paywall interactions, onboarding events, audio and breathing session events, and technical data such as device model, OS version, app version, locale, and timezone.
+        </p>
+        <p>
+          We use a stable anonymous analytics identifier so that analytics and subscription state can be associated across events without requiring an account.
+        </p>
+      </section>
 
-    <section>
-      <h2>6. Do We Sell Your Information?</h2>
-      <p>No. We do not sell your personal information. We also do not share it with third parties for their own advertising purposes.</p>
-    </section>
+      <section>
+        <h2>Purchases and Subscriptions</h2>
+        <p>
+          We use Apple App Store / StoreKit and RevenueCat to support subscriptions, trials, purchase processing, receipt handling, and entitlement management.
+        </p>
+        <p>
+          Subscription-related information may include product identifiers, package identifiers, offering identifiers, trial eligibility, entitlement status, purchase status, renewal state, and receipt or customer information needed to verify access to premium features.
+        </p>
+        <p>
+          RevenueCat is the source of truth for subscription and revenue state in the app.
+        </p>
+      </section>
 
-    <section>
-      <h2>7. Analytics and Tracking</h2>
-      <p>We may collect product events such as screen views, session starts, sound selections, paywall views, trial starts, purchases, and mood logging events.</p>
-      <p>We use these data points to:</p>
-      <ul>
-        <li>improve onboarding and product flow;</li>
-        <li>measure retention and conversion;</li>
-        <li>understand which features are used;</li>
-        <li>identify product issues and opportunities.</li>
-      </ul>
-      <p>We do not use analytics data for third-party advertising.</p>
-    </section>
+      <section>
+        <h2>Advertising Measurement</h2>
+        <p>
+          We use the Meta/Facebook SDK and TikTok Business SDK for app-level advertising measurement and verification signals. These SDKs may process device and usage information that can support app install, app activation, and campaign measurement.
+        </p>
+        <p>
+          We do not send purchase, trial, subscription, or revenue events from app-side code through the Meta or TikTok SDKs.
+        </p>
+        <p>
+          We do not intentionally access IDFA, we do not enable advertiser ID collection in the app code, and we do not request App Tracking Transparency permission.
+        </p>
+      </section>
 
-    <section>
-      <h2>8. Data Retention and Deletion</h2>
-      <p>We retain information only as long as needed for the purposes described in this policy or as required by law.</p>
-      <p>Because Morph: Breath & Focus does not create user accounts, there is no in-app account deletion flow. You can remove locally stored data by deleting the app from your device, and you may contact us if you need help understanding what data remains with third-party providers such as Apple or RevenueCat.</p>
-    </section>
+      <section>
+        <h2>Third-Party Services</h2>
+        <p>We may use the following services to operate the app:</p>
+        <ul>
+          <li><strong>Apple App Store / StoreKit</strong> for in-app purchases and subscription handling.</li>
+          <li><strong>RevenueCat</strong> for subscriptions, offerings, trials, purchases, and entitlements.</li>
+          <li><strong>PostHog</strong> for product analytics and usage insights.</li>
+          <li><strong>Meta/Facebook SDK</strong> for app-level advertising measurement and verification signals.</li>
+          <li><strong>TikTok Business SDK</strong> for app-level advertising measurement and verification signals.</li>
+        </ul>
+        <p>
+          These providers may process information under their own privacy policies and service terms.
+        </p>
+      </section>
 
-    <section>
-      <h2>9. Children</h2>
-      <p>Morph: Breath & Focus is not intended for children under 13 years old. If you believe we have collected information from a child without the appropriate legal basis, please contact us and we will take appropriate steps to delete it.</p>
-    </section>
+      <section>
+        <h2>How We Use Information</h2>
+        <ul>
+          <li>to provide and maintain the app;</li>
+          <li>to deliver breathing, focus, and sound features;</li>
+          <li>to save your preferences and local progress;</li>
+          <li>to process purchases, trials, restoration, and entitlement access;</li>
+          <li>to measure product usage and improve the app;</li>
+          <li>to diagnose bugs, crashes, and technical issues;</li>
+          <li>to understand app-level advertising measurement and campaign performance in a limited, app-signal way.</li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>10. International Data Transfers</h2>
-      <p>If you use the service from outside the country where our providers are located, your information may be processed in other countries. In such cases, we attempt to apply appropriate safeguards as required by law.</p>
-    </section>
+      <section>
+        <h2>Data Sharing</h2>
+        <p>
+          We do not sell your personal information.
+        </p>
+        <p>
+          We share information only as needed to operate the app, process subscriptions, support analytics, support app-level advertising measurement, comply with law, or protect our rights. In practice, that may include sharing with Apple, RevenueCat, PostHog, Meta/Facebook, TikTok, and service providers that help us deliver the app.
+        </p>
+        <p>
+          We do not knowingly share data from the app for third parties’ own direct marketing purposes beyond the service roles described above.
+        </p>
+      </section>
 
-    <section>
-      <h2>11. Changes to This Policy</h2>
-      <p>We may update this Privacy Policy from time to time. If the changes are material, we may notify you in the app or update the date on this page. Continued use of the service after changes become effective means you accept the updated policy.</p>
-    </section>
+      <section>
+        <h2>Data Retention</h2>
+        <p>
+          We retain information for as long as needed to provide the app, support subscriptions, analyze product usage, comply with legal obligations, resolve disputes, and enforce agreements.
+        </p>
+        <p>
+          Local data can usually be removed by deleting the app from your device. Subscription-related records may remain with Apple and RevenueCat according to their policies and the requirements of the service.
+        </p>
+      </section>
 
-    <section>
-      <h2>12. Contact</h2>
-      <p>If you have questions about privacy, data deletion, or this policy, contact us at <a href="mailto:morphbreath@icloud.com">morphbreath@icloud.com</a> or use the support contact listed in the app.</p>
-    </section>
+      <section>
+        <h2>Children’s Privacy</h2>
+        <p>
+          Morph: Breath & Focus is not intended for children under 13 years old, or the minimum age required by law in your jurisdiction if that is higher.
+        </p>
+        <p>
+          If you believe a child has provided information through the app, contact us and we will take appropriate steps to review and delete it where required.
+        </p>
+      </section>
 
-    <footer>
-      This Privacy Policy applies to Morph: Breath & Focus and any related pages that link to it.
-    </footer>
+      <section>
+        <h2>Your Choices and Rights</h2>
+        <ul>
+          <li>You can choose not to enter a name or nickname.</li>
+          <li>You can adjust or disable app settings and local preferences in the app.</li>
+          <li>You can manage or cancel subscriptions in your Apple Account settings.</li>
+          <li>You can delete the app to remove locally stored data from your device.</li>
+          <li>You can contact us to ask about access, correction, or deletion of information where we can reasonably help and where law requires it.</li>
+          <li>You can contact Apple or RevenueCat regarding subscription records or payment-related items they control.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Security</h2>
+        <p>
+          We use reasonable administrative, technical, and organizational safeguards designed to protect information. No method of storage or transmission is completely secure, and we cannot guarantee absolute security.
+        </p>
+      </section>
+
+      <section>
+        <h2>International Processing</h2>
+        <p>
+          Your information may be processed in countries other than the one where you live, including countries where our service providers operate. Those countries may have different data protection laws, and we rely on appropriate safeguards where required.
+        </p>
+      </section>
+
+      <section>
+        <h2>Changes to This Policy</h2>
+        <p>
+          We may update this Privacy Policy from time to time. If we make material changes, we may notify you in the app or by updating the date shown on this page. Your continued use of the app after an update means you accept the revised policy.
+        </p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>
+          If you have questions about this Privacy Policy or privacy in the app, contact us at
+          <a href="mailto:morphbreath@icloud.com">morphbreath@icloud.com</a>.
+        </p>
+        <p>
+          Related document: <a href="https://andrewdzhy.github.io/morph-legal/terms.html">Terms of Use</a>
+        </p>
+      </section>
+    </div>
+
+    <div class="footer">
+      Morph: Breath & Focus · <a href="https://andrewdzhy.github.io/morph-legal/privacy.html">Privacy Policy</a> · <a href="https://andrewdzhy.github.io/morph-legal/terms.html">Terms of Use</a>
+    </div>
   </main>
 </body>
 </html>
